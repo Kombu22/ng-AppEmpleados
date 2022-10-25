@@ -26,7 +26,7 @@ const appRoutes:Routes=[
   {path:'', component:HomeComponentComponent},
   {path:'proyectos', component:ProyectosComponentComponent},
   {path:'quienes', component:QuienesComponentComponent},
-  {path:'contacto', component:ContactoComponentComponent},
+  {path:'contacto', component:ContactoComponentComponent, canActivate:[LoginGuardian]},
   {path:'actualiza/:id', component:ActualizaComponentComponent},
   {path:'login', component:LoginComponent},
   {path:'**', component:ErrorPersonalizadoComponent},
@@ -49,7 +49,7 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {onSameUrlNavigation:'reload'}),
     HttpClientModule,
 
     
