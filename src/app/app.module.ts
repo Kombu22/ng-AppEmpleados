@@ -26,7 +26,7 @@ const appRoutes:Routes=[
   {path:'', component:HomeComponentComponent},
   {path:'proyectos', component:ProyectosComponentComponent},
   {path:'quienes', component:QuienesComponentComponent},
-  {path:'contacto', component:ContactoComponentComponent, canActivate:[LoginGuardian]},
+  {path:'contacto', component:ContactoComponentComponent},
   {path:'actualiza/:id', component:ActualizaComponentComponent},
   {path:'login', component:LoginComponent},
   {path:'**', component:ErrorPersonalizadoComponent},

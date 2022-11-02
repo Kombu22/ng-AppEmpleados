@@ -1,23 +1,50 @@
-<div>
-    <br>
-    <form class="form-group row" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="login.component.css">
+    </head>
+    <body>
 
-        <div class="form-group  col-md-3">
-
-            <input type="email" name="email" placeholder="Email" class="form-control" ngModel>
-
+        <div class="login">
+            <br>
+            <h1 class="text-center">Hello again!</h1>
+        
+            <form class="needs-validation" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+        
+                <div class="form-group was-validated">
+                    <label class="form-label" for="email">Email address</label>
+                    <input class="form-control" type="email" id="email" required name="email" placeholder="Email" ngModel >
+                    <div class="invalid-feedback">
+                        Please enter your email adress
+                    </div>
+                </div>
+                <br>
+                <div class="form-group was-validated" >
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control" type="password" id="password" required name="password" placeholder="Password" ngModel>
+                    <div class="invalid-feedback">
+                        Please enter your password
+                    </div>
+                </div>
+                <br>
+                <div class="form-group form-check">
+                    <input class="form-check-input" type="checkbox" id="check">
+                    <label class="form-check-label" for="check">Remember me</label>
+                </div>
+                <br>
+                <div>
+        
+                    <button type="submit" class="btn btn-success w-100">Sign in</button>
+        
+                </div>
+            </form>
         </div>
-        <br>
-        <div class="form-group  col-md-3">
 
-            <input type="password" name="password" placeholder="Password" class="form-control" ngModel>
+    </body>
+</html>
 
-        </div>
-        <br><br>
-        <div>
 
-            <button type="submit" class="btn btn-primary">Login</button>
-
-        </div>
-    </form>
-</div>
